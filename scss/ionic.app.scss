@@ -1,0 +1,72 @@
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+
+$font_size_default: 1.2em;
+$font_size_list: 1em;
+$font_style_default: Arial;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+#header {
+	h1 {
+		font-family:$font_style_default;
+		font-size:$font_size_default;
+		font-weight:bold;
+	};
+}
+#container {
+	background:$light;
+	position:relative;
+	top:0px;
+	height:100%;
+	ion-content {
+		padding:60px 5px 10px;
+	};
+}
+#list {
+	.item {
+		font-family:$font_style_default;
+		font-size:$font_size_list;
+		padding:5px 10px;
+		.hawb-no {}
+		.consignee {
+			font-size:0.9em;
+		}
+		.status {
+			font-size:0.9em;
+			color:$dark;
+		}
+	}
+	.item.done {
+		border-bottom:5px solid $balanced;
+	}
+	.item.process {
+		border-bottom:5px solid $energized;
+	}
+	.item.failed {
+		border-bottom:5px solid $assertive;
+	}
+	.item-divider {
+		height:45px;
+		line-height:45px;
+		background:$dark;
+		font-weight:bold;
+		padding:0px 5px;
+		color:$light;
+	}
+}
+
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+@import "www/lib/ionic/scss/ionic";
