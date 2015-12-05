@@ -34,10 +34,9 @@
 #list .item-divider {
   height: 45px;
   line-height: 45px;
-  background: #444;
+  border-bottom: 3px solid #387ef5;
   font-weight: bold;
-  padding: 0px 5px;
-  color: #fff; }
+  padding: 0px 10px; }
 
 /*!
   Ionicons, v2.0.1
